@@ -1,0 +1,12 @@
+<div class="grid">
+    <div class="col-6">Country</div>
+    <div class="col-6">
+        <p-dropdown 
+            optionLabel="countryName" 
+            optionValue="countryId"     
+            [options]="countryList" 
+            [style]="{'width':'200px'}"
+            (onChange)="countryValueChanged($event)">
+        </p-dropdown>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<app-calculator-help></app-calculator-help>
+<div class="margin-top-1emm">
+    <p-panel header="Calculator">
+        <app-country-selection
+            [countryList]="countryList"
+            (countryChanged)="countryChanged($event)">
+        </app-country-selection>
+        <app-vat-rate-selection
+            [countryVATRateList]="currentCountryVATRateList"
+            (countryVATRateChanged)="countryVATRateChanged($event)">
+        </app-vat-rate-selection>
+        <app-vat-calculator [currentVATRate]="currentVATRate"></app-vat-calculator>
+    </p-panel>
+</div>

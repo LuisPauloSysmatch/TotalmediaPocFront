@@ -1,0 +1,13 @@
+<div class="grid margin-top-1emm">
+    <div class="col-6">VAT rate</div>
+    <div class="col-6">
+        <span class="display-inline">
+            <div *ngFor="let vatValue of countryVATRateList" class="field-checkbox display-inline">
+                <div class="field-radiobutton display-inline">
+                    <p-radioButton inputId="vatValue.countryVATRateId" name="vatValue" [value]="vatValue" [(ngModel)]="selectedVat" (onClick)="countryVATRateValueChanged()"></p-radioButton>
+                    <label [for]="vatValue.countryVATRateId" class="margin-right-1emm">{{vatValue.countryVATRateValue}} %</label>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>

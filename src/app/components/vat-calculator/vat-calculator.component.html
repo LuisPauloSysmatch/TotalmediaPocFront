@@ -1,0 +1,22 @@
+<div class="grid margin-top-1emm">
+    <div class="col-6">
+        <div class="field-radiobutton margin-top-1emm">
+            <p-radioButton name="textboxLabels" value="net" inputId="net" [(ngModel)]="selectedTextBox" (onClick)="selectedTextboxChanged()"></p-radioButton>
+            <label for="net">Price without VAT</label>
+        </div>
+        <div class="field-radiobutton" style="margin-top: 1.5em;">
+            <p-radioButton name="textboxLabels" value="vat" inputId="vat" [(ngModel)]="selectedTextBox" (onClick)="selectedTextboxChanged()"></p-radioButton>
+            <label for="vat">Value added tax</label>
+        </div>
+        <div class="field-radiobutton" style="margin-top: 1.5em;">
+            <p-radioButton name="textboxLabels" value="gross" inputId="gross" [(ngModel)]="selectedTextBox" (onClick)="selectedTextboxChanged()"></p-radioButton>
+            <label for="gross">Price with VAT included</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div><p-inputNumber [(ngModel)]="netValue" mode="currency" currency="EUR" locale="pt-PT" [disabled]="selectedTextBox !== 'net'" (onInput)="netImput($event)"></p-inputNumber></div>
+        <div><p-inputNumber [(ngModel)]="vatValue" mode="currency" currency="EUR" locale="pt-PT" [disabled]="selectedTextBox !== 'vat'" (onInput)="vatImput($event)"></p-inputNumber></div>
+        <div><p-inputNumber [(ngModel)]="grossValue" mode="currency" currency="EUR" locale="pt-PT" [disabled]="selectedTextBox !== 'gross'" (onInput)="grossImput($event)"></p-inputNumber></div>
+    </div>
+</div>
+

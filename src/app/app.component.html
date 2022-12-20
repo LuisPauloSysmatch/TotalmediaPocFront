@@ -1,0 +1,7 @@
+<p-toast></p-toast>
+<div [hidden]="!spinnerVisible" class="loader">
+    <p-blockUI [blocked]="true"></p-blockUI>
+    <p-progressSpinner></p-progressSpinner>
+</div>
+<app-menu-top></app-menu-top>
+<router-outlet></router-outlet>
